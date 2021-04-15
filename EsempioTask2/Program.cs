@@ -22,7 +22,7 @@ namespace EsempioTask2
             Task<int> t2 = Task.Factory.StartNew(() => Print(false, cts.Token), cts.Token);
 
             Task t3 = new Task(() => Print(true, cts.Token), cts.Token);
-            Thread.Sleep(10);
+            Thread.Sleep(10);   
             cts.Cancel();
 
             Console.WriteLine($"t1 Stato:{t1.Status}");
